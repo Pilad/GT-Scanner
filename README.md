@@ -1,5 +1,5 @@
 # DetravScanner
-DetravScanner for IMPACT
+DetravScanner for GT5
 
 Source pack installation information:
 
