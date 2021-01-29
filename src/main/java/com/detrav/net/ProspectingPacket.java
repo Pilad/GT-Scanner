@@ -55,46 +55,6 @@ public class ProspectingPacket extends DetravPacket {
         this.metaMap = new HashMap<>();
     }
 
-  /*  private static void addOre(ProspectingPacket packet, byte y, int i, int j, short meta) {
-        final String name;
-        short[] rgba;
-
-        try {
-            if(packet.ptype == 0 || packet.ptype == 1) {
-                // Ore or Small Ore
-                if (meta < 7000 || meta > 7500) {
-                    if (meta > 0) {
-						Materials tMaterial = GregTech_API.sGeneratedMaterials[meta % 1000];
-                        rgba = tMaterial.getRGBA();
-                        name = tMaterial.getLocalizedNameForItem(GT_LanguageManager.getTranslation("gt.blockores." + meta + ".name"));
-                    }
-            } else if (packet.ptype == 2) {
-                // Fluid
-                rgba = fluidColors.get((int) meta);
-                if (rgba == null) {
-                    DetravScannerMod.proxy.sendPlayerExeption( "Unknown fluid ID = " + meta + " Please add to FluidColors.java!");
-                    rgba = new short[]{0,0,0,0};
-                }
-
-                name = Objects.firstNonNull(
-                    FluidRegistry.getFluid(meta).getLocalizedName(new FluidStack(FluidRegistry.getFluid(meta), 0)),
-                    StatCollector.translateToLocal("gui.detrav.scanner.unknown_fluid")
-                );
-            } else if (packet.ptype == 3) {
-                // Pollution
-                name = StatCollector.translateToLocal("gui.detrav.scanner.pollution");
-                rgba = new short[]{125,123,118,0};
-            } else {
-                return;
-            }
-        }
-		
-		} catch (Exception ignored) {
-            return;
-        }
-        packet.ores.put(name, ((rgba[0] & 0xFF) << 16) + ((rgba[1] & 0xFF) << 8) + ((rgba[2] & 0xFF)));
-        packet.metaMap.put(meta, name);
-	}*/
     private static void addOre(ProspectingPacket packet, byte y, int i, int j, short meta) {
         final String name;
         short[] rgba;
