@@ -22,7 +22,7 @@ public class DetravPortableChargerPacket01 extends DetravPacket {
         return tOut.toByteArray();
     }
 
-    @Override
+    //@Override
     public Object decode(ByteArrayDataInput aData) {
         DetravPortableChargerPacket01 packet = new DetravPortableChargerPacket01();
         packet.charge = aData.readLong();
